@@ -226,6 +226,10 @@ Template:
 
 ```html
 {{#stooges}}
+{{__index__}}
+{{#__first__}}
+@
+{{/__first__}}
 <b>{{name}}</b>
 {{/stooges}}
 ```
@@ -233,9 +237,9 @@ Template:
 Output:
 
 ```html
-<b>Moe</b>
-<b>Larry</b>
-<b>Curly</b>
+0@<b>Moe</b>
+1<b>Larry</b>
+2<b>Curly</b>
 ```
 
 When looping over an array of strings, a `.` can be used to refer to the current item in the list.
